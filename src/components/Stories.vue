@@ -43,7 +43,9 @@
             <div class="story__top">
               <div class="user">
                 <div class="user__image">
-                  <img :src="story.picture" alt=""/>
+                  <a :href="story.link" target="_blank">
+                    <img :src="story.picture" alt=""/>
+                  </a>
                 </div>
                 <div class="user__name">
                   {{ story.username }}
@@ -55,7 +57,9 @@
           <div class="story__body">
             <div class="user" v-if="index !== indexSelected">
               <div class="user__image" :style="getNotViewedIndex(story) === -1 ? `background: #FFFFFF` : ''">
-                <img :src="story.picture" alt=""/>
+                <a :href="story.link" target="_blank">
+                  <img :src="story.picture" alt=""/>
+                </a>
               </div>
               <div class="user__name">
                 {{ story.username }}
